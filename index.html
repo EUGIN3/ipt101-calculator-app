@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="calculator.css">
+</head> 
+<body>
+    <!-- Acts as the body for centering the calculator. -->
+    <div id="main-containter">
+        <!-- The main container of the calculator and the title. -->
+        <div id="main-calculator-container">
+            <!-- Title -->
+            <p id="title">Calculator Application</p>
+
+            <!-- The calculator -->
+            <div id="calculator-container">
+                <table>
+                    <!-- Result layer. -->
+                    <tr>
+                        <td colspan="3" id="result-con"><input type="text" id="result" placeholder="0" disabled></td>
+                        <td><input type="button" value="" class="cal-btn del-btn" onclick="deleteChar()"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="button" value="C" class="cal-btn clear-btn" onclick="clearInput()"></td>
+                        <td><input type="button" value="÷" class="cal-btn ope-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="x" class="cal-btn ope-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="-" class="cal-btn ope-btn" onclick="enterInput(value)"></td>
+                    </tr>
+
+                    <!-- First layer of buttons. -->
+                    <tr>
+                        <td><input type="button" value="1" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="2" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="3" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="+" class="cal-btn ope-btn" onclick="enterInput(value)"></td>
+                    </tr>
+
+                    <!-- Second later of buttons. -->
+                    <tr>
+                        <td><input type="button" value="4" class="cal-btn" onclick="enterInput(value)"</td>
+                        <td><input type="button" value="5" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="6" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td rowspan="3"><input type="button" value="=" class="cal-btn equal-btn" onclick="calculate()"></td>
+                    </tr>
+
+                    <!-- Third layer of buttons. -->
+                    <tr>
+                        <td><input type="button" value="7" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="8" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="9" class="cal-btn" onclick="enterInput(value)"></td>
+                    </tr>
+
+                    <!-- Fifth layer of buttons. -->
+                    <tr>
+                        <td><input type="button" value="." class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="0" class="cal-btn" onclick="enterInput(value)"></td>
+                        <td><input type="button" value="00" class="cal-btn" onclick="enterInput(value)"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="calculator.js"></script>
+</body>
+</html>
